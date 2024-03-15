@@ -1,0 +1,91 @@
+\documentclass{beamer}
+\input{../preamble/symbols}
+\DeclareMathOperator{\Th}{Th}
+\usetheme{Madrid}
+\usecolortheme{default}
+
+\title{G\"odel's Incompleteness Theorems}
+\subtitle{The way G\"odel did it}
+
+\author[Savyasachi, Sanidhya, Naman, Mehul]{Savyasachi~Deval
+    \and Sanidhya~Kaushik \\
+    \and Naman~Mishra
+    \and Mehul~Shrivastava}
+
+\date{16 March 2024}
+
+\begin{document}
+\frame{\titlepage}
+
+\begin{frame}
+\frametitle{Formal Proof Systems}
+\begin{itemize}
+    \item A formal proof system provides a notion of well-formed formulas (WFFs),
+    and a set of axioms along with rules of inference.
+    \item A \emph{proof} is a sequence of WFFs, each of which is either
+    an axiom or follows from previous statements by a rule of inference.
+    \item A \emph{sentence} is a WFF with no free variables.
+    \item A sentence is \emph{provable} if there is a proof of it.
+    For a sentence $\phi$, we write \[
+        \vdash \phi
+    \] to denote that $\phi$ is provable.
+    We say that $\phi$ is a \emph{theorem}.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Theories and Theorems}
+\begin{itemize}
+    \item For a sentence $\phi$, we write \[
+        \vDash \phi
+    \] to denote that $\phi$ is \emph{true}.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Consistency and Completeness}
+\begin{itemize}
+    \item A formal proof system (taken with a theory) is \emph{consistent}
+    if every theorem is true. \[
+        \vdash \phi \implies \vDash \phi
+    \]
+    \item A formal proof system is \emph{complete} if every true sentence
+    is a theorem. \[
+        \vDash \phi \implies \vdash \phi
+    \]
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{The Language of Arithmetic}
+The language of arithmetic consists of:
+\begin{itemize}
+    \item the constants $0$ and $1$,
+    \item the binary operations $+$ and $\cdot$,
+    \item the relation $=$,
+    \item symbols for variables, and
+    \item symbols from first-order logic.
+\end{itemize}
+% We will denote the set of all WFFs in the language of arithmetic by $L_\N$.
+\end{frame}
+
+% \begin{frame}
+% \frametitle{The Theory of Arithmetic}
+% We wish to give a meaning to the symbols of arithmetic.
+% We do this by picking a set of axioms for arithmetic, that is powerful
+% enough to express addition and multiplication.
+% The Peano axioms will suffice for our purposes.
+%
+% We call the set of all sentences that are true in the natural numbers
+% the \emph{theory of arithmetic}, denoted by $\Th(\N)$.
+% \end{frame}
+
+\begin{frame}
+\frametitle{First Incompleteness Theorem}
+\begin{theorem}[1931]
+    There cannot exist a sound and complete proof system for
+    arithmetic.
+\end{theorem}
+\end{frame}
+
+\end{document}
