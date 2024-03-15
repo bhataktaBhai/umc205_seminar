@@ -1,8 +1,8 @@
 \documentclass{beamer}
 \input{../preamble/symbols}
 \DeclareMathOperator{\Th}{Th}
-\usetheme{Madrid}
-\usecolortheme{default}
+\usetheme{metropolis}
+% \usecolortheme{default}
 
 \title{G\"odel's Incompleteness Theorems}
 \subtitle{The way G\"odel did it}
@@ -95,5 +95,41 @@ That is there exists a set of axioms which can be used to prove every true state
 Their main idea was to start with a set of axioms and keep on including the statements which are true but unprovable.
 \end{frame}
 
+\begin{frame}
+\frametitle{The Gigachad Big-Brain Metamove}
+\[
+    \text{Let } \phi \text{ be the statement ``This statement is unprovable.''}
+\]
+\end{frame}
+
+\begin{frame}
+\frametitle{An Encoding of Symbols}
+\begin{itemize}
+    \item We can assign a unique positive integer to each symbol in the
+    language.
+    For example,
+    \begin{align*}
+        \top &\mapsto 1 & \bot &\mapsto 2 \\
+        \land &\mapsto 3 & \lor &\mapsto 4 \\
+        \to &\mapsto 5 & \leftrightarrow &\mapsto 6 \\
+        \neg &\mapsto 7 & = &\mapsto 8 \\
+        \forall &\mapsto 9 & \exists &\mapsto 10 \\
+        0 &\mapsto 11 & 1 &\mapsto 12 \\
+        + &\mapsto 13 & \cdot &\mapsto 14 \\
+        x &\mapsto 15 & y &\mapsto 16 \\
+        z &\mapsto 17 & \ldots &\mapsto \ldots
+    \end{align*}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{An Encoding of WFFs}
+\begin{itemize}
+    \item Let $p_n$ denote the $n$-th prime number.
+    \item We define the encoding of a WFF $\phi$ as \[
+        \enc{\phi} = p_1^{\enc{\phi_1}} \cdot p_2^{\enc{\phi_2}} \cdot \ldots \cdot p_k^{\enc{\phi_k}}
+    \] where $\phi_1, \phi_2, \dots, \phi_k$ are the symbols in $\phi$.
+\end{itemize}
+\end{frame}
 
 \end{document}
