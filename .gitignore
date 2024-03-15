@@ -6,6 +6,9 @@
 **/*.synctex.gz
 **/*.aux
 **/*.dvi
+**/*.nav
+**/*.snm
 # **/*.pdf
 **/*.synctex*
 .DS_Store
+pdflatex*.fls
